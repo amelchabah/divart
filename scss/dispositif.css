@@ -1,0 +1,13 @@
+.dispositifInteractif {
+    display: none;
+}
+
+@media screen and (max-width:900px) {
+    .mainSite {
+        display: none !important;
+    }
+
+    .dispositifInteractif {
+        display: block !important;
+    }
+}
