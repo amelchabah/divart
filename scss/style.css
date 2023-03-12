@@ -99,6 +99,13 @@ a:focus {
   cursor: pointer;
 }
 
+h1 {
+  font-family: "playfair display italic", serif;
+  font-size: 5rem;
+  font-weight: 300;
+}
+
+
 /* ------------------------------------------------ */
 /* header */
 /* ------------------------------------------------ */
@@ -143,6 +150,16 @@ header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/background.png');
   background-size: cover;
   background-repeat: no-repeat;
+  padding: 4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.indexheader .button {
+  padding: 1.5rem 2rem;
+  border: 1px solid white;
 }
 
 
