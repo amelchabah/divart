@@ -18,7 +18,8 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url(../fonts/Montserrat/Montserrat.woff2) format("woff2"), url(../fonts/Montserrat/Montserrat.woff) format("woff");
+  src: url(../fonts/Montserrat/Montserrat-Regular.woff2) format("woff2"), url(../fonts/Montserrat/Regular.woff) format("woff");
+
 }
 
 @font-face {
@@ -39,8 +40,44 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
+/* scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff72;
+}
+
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 20px;
+  background-color: #ffffff72;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #ffffff72;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #ffffff72;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #00000072;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #00000072;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #00000072;
+}
 
 h1,
 h2,
@@ -50,6 +87,16 @@ h5,
 h6,
 p {
   margin: 0;
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 /* ------------------------------------------------ */
@@ -70,6 +117,10 @@ ul {
   width: 100%;
 }
 
+.whitenavbar {
+  color: white;
+}
+
 .navbar .logo img {
   height: 2.5rem;
 }
@@ -85,10 +136,11 @@ header {
 }
 
 .indexheader {
+  color: white;
   top: 0;
   margin: 0;
   height: 100vh;
-  background-image: url('../assets/background.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/background.png');
   background-size: cover;
   background-repeat: no-repeat;
 }

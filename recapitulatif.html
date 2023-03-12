@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./scss/style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <nav aria-label="navbar" class="navbar">
+        <div class="logo">
+            <a href="./index.html" title="Retour à l'accueil"><img src="./assets/logo.svg" alt="logo divart"></a>
+        </div>
+        <div class="links">
+            <a href="./index.html" title="Découvrir">Découvrir</a>
+            <a href="./dispositif.html" title="Expérimenter">Expérimenter</a>
+            <a href="./billetterie.html" title="Réserver un billet">Réserver un billet</a>
+        </div>
+    </nav>
+    <header>
+        <nav aria-label="breadcrumb" class="breadcrumb">
+            <ul>
+                <li><a href="#">Retour à la page précédente</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <article>
+            <h2>Coordonnées</h2>
+            <form>
+                <div>
+                    <label for="client_prenom">First name<span style="color:red"> *</span></label>
+                    <div class="errorTxt"></div>
+                    <input type="text" name="client_prenom" class="client_prenom" placeholder="Amel" maxlength="20"
+                        required>
+
+                </div>
+                <div>
+                    <label for="client_nom">Last name<span style="color:red"> *</span></label>
+                    <div class="errorTxt"></div>
+                    <input type="text" name="client_nom" class="client_nom" placeholder="Chabah" maxlength="20"
+                        required>
+                </div>
+                <div>
+                    <label for="client_nom">Last name<span style="color:red"> *</span></label>
+                    <div class="errorTxt"></div>
+                    <input type="text" name="client_nom" class="client_nom" placeholder="Chabah" maxlength="20"
+                        required>
+                </div>
+                <input type="submit" value="Valider votre réservation">
+
+            </form>
+            <h6>Les informations recueillies à partir de ce formulaire font l’objet d’un traitement informatique par le
+                Musée MMI en tant que responsable du traitement pour la gestion et le suivi de votre demande. A défaut
+                de fourniture de l’ensemble des informations mentionnées comme obligatoires dans le formulaire, votre
+                demande ne pourra pas être traitée ou son traitement sera retardé.
+                Pour en savoir plus sur la gestion de vos données et vos droits, consultez notre politique de
+                confidentialité.
+            </h6>
+
+        </article>
+        <article>
+            <h2>Récapitulatif de votre commande</h2>
+            <div class="recap">
+                <h4>Impressionne-moi, une exposition impressionniste</h4>
+                <h5>Vendredi 17 février</h5>
+                <h5>13:00</h5>
+                <hr>
+                <div class="tarif">
+                    <h4>Enfants et - 18 ans</h4>
+                    <div class="prix">
+                        <h4>Gratuit</h4>
+                        <h4>
+                            x1
+                        </h4>
+                    </div>
+                </div>
+                <hr>
+                <div class="tarif">
+                    <h3>Total</h3>
+                    <h4>Gratuit</h4>
+                </div>
+            </div>
+        </article>
+    </section>
+   
+    <footer>
+        <div class="logo">
+            <img src="./assets/logo.svg" alt="logo divart">
+        </div>
+        <ul>
+            <li><a href="./index.html" title="Découvrir l'exposition"></a>Découvrir</a></li>
+            <li><a href="./billetterie.html" title="Dispositif interactif">Expérimenter</a></li>
+            <li><a href="./billetterie.html" title="Réserver votre billet">Réserver votre billet</a></li>
+            <li><a href="./mentions.html" title="Mentions légales">Mentions légales</a></li>
+
+        </ul>
+        <div class="infos">
+            <p>2 Rue Albert Einstein<br>77420 Champs Sur Marne</p>
+            <a href="" title="Page Instagram"><img src="" alt=""></a>
+            <a href="" title="Page Facebook"><img src="" alt=""></a>
+        </div>
+    </footer>
+</body>
+
+</html>
