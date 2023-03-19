@@ -15,19 +15,46 @@
     <meta name="theme-color" content="#000000">
     <link rel="stylesheet" href="./scss/style.css">
     <link rel="stylesheet" href="./scss/dispositif.css">
+    <script src="js/script.js"></script>
+
 </head>
 
 <body>
-    <nav aria-label="navbar" class="navbar">
-        <div class="logo">
-            <a href="./index.html" title="Retour à l'accueil"><img src="./assets/logoblanc.svg" alt="logo divart"></a>
+    <div class="menu-overlay">
+        <div class="overlay-menu">
+            <ul class="one">
+                <li><a href="./index.html" title="Découvrir">Découvrir</a></li>
+                <li><a href="./dispositif.html" title="Expérimenter">Expérimenter</a></li>
+                <li><a href="./billetterie.html" title="Réserver un billet">Réserver un billet</a></li>
+            </ul>
         </div>
-        <div class="links">
-            <a href="./index.html" title="Découvrir">Découvrir</a>
-            <a href="./dispositif.html" title="Expérimenter">Expérimenter</a>
-            <a href="./billetterie.html" title="Réserver un billet">Réserver un billet</a>
-        </div>
-    </nav>
+        <div class="noise"></div>
+    </div>
+
+    <div class="nav difference" data-scroll>
+        <nav class="navbar whitenavbar fadein">
+            <div class="logo">
+                <a href="./index.html" title="Retour à l'accueil"><img src="./assets/logoblanc.svg" alt="logo divart"></a>
+            </div>
+
+            <div class="categories">
+                <ul class="categories-list">
+                    <a href="./index.html" title="Découvrir">Découvrir</a>
+                    <a href="./dispositif.html" title="Expérimenter">Expérimenter</a>
+                    <a href="./billetterie.html" title="Réserver un billet">Réserver un billet</a>
+                </ul>
+                <div id="toggle-menu" class="menu">
+                    <div class="menu-link">
+                        <span class="hamburger-icon">
+                            <span class="hamburger-bar hamburger-bar-1"></span>
+                            <span class="hamburger-bar hamburger-bar-2"></span>
+                            <span class="hamburger-bar hamburger-bar-3"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
     <header>
         <!-- <nav aria-label="breadcrumb" class="breadcrumb">
             <ul>
@@ -37,8 +64,8 @@
         </nav> -->
         <div class="mainSite">
 
-            <div class="titleQR">
-                <div class="title">
+            <div class="qrwrapper">
+                <article>
                     <h1>Un super dispositif interactif</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
@@ -46,9 +73,21 @@
                         ut
                         aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                         cillum dolore eu fugiat nulla.</p>
-                </div>
+
+                </article>
                 <div class="qr">
-                    <img src="./assets/qrCode.png" alt="vers le Dispositif">
+                    <img src="./assets/qrCode.png" alt="Ouvrir le dispositif">
+                </div>
+            </div>
+            <div class="tutorialwrapper">
+                <ul>
+                    <li><span>If you a have an apple device, please install the <a href="https://apps.apple.com/fr/app/webxr-viewer/id1295998056">Mozilla's webXR viewer.</a></span></li>
+                    <li>Scan the QR code bellow.</li>
+                    <li>Enjoy the Experiment !</li>
+                </ul>
+                <div class="tutorial">
+                    <img src="/assets/background.png" alt="">
+                    <!-- <video></video> -->
                 </div>
             </div>
 
@@ -61,7 +100,7 @@
                     <li><a href="./billetterie.html" title="Dispositif interactif">Expérimenter</a></li>
                     <li><a href="./billetterie.html" title="Réserver votre billet">Réserver votre billet</a></li>
                     <li><a href="./mentions.html" title="Mentions légales">Mentions légales</a></li>
-        
+
                 </ul>
                 <div class="infos">
                     <p>2 Rue Albert Einstein<br>77420 Champs Sur Marne</p>
@@ -69,7 +108,7 @@
                     <a href="" title="Page Facebook"><img src="" alt=""></a>
                 </div>
             </footer>
-        
+
 
         </div>
     </header>
@@ -77,7 +116,7 @@
 
     <script src="./js/dispositif.js" type="module"></script>
 
-    
+
 
 </body>
 

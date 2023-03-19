@@ -1,11 +1,85 @@
 body {
-    background-color: black !important;
+    background-color: rgb(14, 14, 14) !important;
     color: white !important;
 }
 
 .dispositifInteractif {
     display: none;
 }
+
+/* page */
+
+.qrwrapper {
+    display: flex;
+    width: 90%;
+    margin: 3rem auto;
+    gap: 7rem;
+}
+
+.qrwrapper h1 {
+    margin-bottom: 2rem;
+}
+
+.qr {
+    margin: 0 3rem;
+}
+
+.qr img {
+    height: 20rem;
+}
+
+.tutorialwrapper {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    gap: 5rem;
+}
+
+/* .mainSite ul li {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.mainSite li span:first {
+    margin-right: 2rem;
+    font-family: 'Playfair Display Italic', serif;
+    font-size: 4rem;
+    padding: 20px 30px;
+} */
+.mainSite .tutorial img {
+    height: 20rem;
+}
+
+
+.mainSite .tutorialwrapper ul {
+    counter-reset: section;
+    list-style: none;
+}
+
+.mainSite .tutorialwrapper li {
+    margin: 0 0 10px 0;
+    line-height: 40px;
+}
+
+.mainSite .tutorialwrapper li:before {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 5rem;
+    content: counter(section);
+    counter-increment: section;
+    display: inline-block;
+    padding-top: 10px;
+    width: 90px;
+    height: 90px;
+    margin: 0 20px 0 0;
+    border: 1px solid #ccc;
+    border-radius: 100%;
+    text-align: center;
+}
+
+
 
 @media screen and (max-width:900px) {
     .mainSite {

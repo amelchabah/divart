@@ -6,26 +6,15 @@
 /* ------------------------------------------------ */
 /* Fonts */
 /* ------------------------------------------------ */
-@font-face {
-  font-family: "Playfair Display";
-  src: url(../src/fonts/Playfair-Display/PlayfairDisplay.woff2) format("woff2"), url(../fonts/Playfair-Display/PlayfairDisplay.woff) format("woff");
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+  --color-black: #141414;
+  --color-white: #f5f5f5;
 }
 
-@font-face {
-  font-family: "Playfair Display Italic";
-  src: url(../fonts/Playfair-Display/PlayfairDisplay-Italic.woff2) format("woff2"), url(../fonts/Playfair-Display/PlayfairDisplay-Italic.woff) format("woff");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url(../fonts/Montserrat/Montserrat-Regular.woff2) format("woff2"), url(../fonts/Montserrat/Regular.woff) format("woff");
-
-}
-
-@font-face {
-  font-family: "Montserrat Italic";
-  src: url(../fonts/Montserrat/Montserrat-Italic.woff2) format("woff2"), url(../fonts/Montserrat/Montserrat-Italic.woff) format("woff");
-}
 
 /* ------------------------------------------------ */
 /* global */
@@ -40,7 +29,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 /* scrollbar */
@@ -100,21 +89,150 @@ a:focus {
 }
 
 h1 {
-  font-family: "playfair display italic", serif;
+  font-family: "playfair display", serif;
+  font-style: italic;
   font-size: 5rem;
-  font-weight: 300;
+  font-weight: 500;
 }
 
+h2 {
+  font-family: "playfair display", serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-family: "playfair display", serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+h4 {
+  font-family: 'dm sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+
+}
+
+h5 {
+  font-family: 'dm sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+
+}
+
+label {
+  font-size: 'dm sans', sans-serif;
+  font-weight: 500;
+}
+
+input[type="date"] {
+  font-family: 'dm sans', sans-serif;
+}
+
+input,
+option,
+select {
+  padding: 0.5rem 0.8rem;
+  font-family: 'dm sans', sans-serif;
+
+}
+
+button,
+input[type="submit"] {
+  font-family: 'dm sans', sans-serif;
+  width: fit-content;
+  background-color: var(--color-black);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  margin-top: 1.5rem;
+  float: right;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: black;
+}
+
+.counter {
+  margin: 0;
+  border-radius: 50%;
+  padding: 5px 10px;
+}
+
+.amount {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.horaires {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 1rem; */
+}
+
+
+/*
+  Hide radio button (the round disc)
+  we will use just the label to create pushbutton effect
+*/
+input[type=radio] * {
+  display: none;
+}
+
+input[type=radio] {
+  /* display:none;  */
+  visibility: hidden;
+  width: 0;
+  margin: 0;
+}
+
+/*
+Change the look'n'feel of labels (which are adjacent to radiobuttons).
+Add some margin, padding to label
+*/
+input[type=radio]+label {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  display: inline-block;
+  /* margin: -2px; */
+  padding: 8px 18px;
+  background-color: #e7e7e7;
+  border-color: #ddd;
+  width: fit-content;
+}
+
+/*
+Change background color for label next to checked radio button
+to make it look like highlighted button
+*/
+input[type=radio]:checked+label {
+  background-image: none;
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
 
 /* ------------------------------------------------ */
 /* header */
 /* ------------------------------------------------ */
 
 ul {
+  padding-left: 0;
   margin: 0;
 }
 
+li {
+  list-style: none;
+}
+
 .navbar {
+  z-index: 90000000;
+  background-color: white;
   position: fixed;
   top: 0;
   display: flex;
@@ -125,7 +243,9 @@ ul {
 }
 
 .whitenavbar {
+  background-color: transparent !important;
   color: white;
+  mix-blend-mode: difference;
 }
 
 .navbar .logo img {
@@ -137,6 +257,151 @@ ul {
   gap: 3rem;
 }
 
+
+
+/*pportfolio nav*/
+/* .navbar {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding-top: 2rem;
+} */
+
+.navbar .home {
+  padding: 0 0.3rem 0.3rem;
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+.menu {
+  position: relative;
+  height: 14px;
+  width: 20px;
+  display: none;
+  filter: contrast(0);
+}
+
+.menu-link {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.hamburger-icon {
+  position: absolute;
+  width: 20px;
+  height: 14px;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 1px;
+}
+
+.hamburger-bar {
+  background-color: #ffffff;
+  height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  transition: all 0.25s ease-in-out;
+}
+
+.hamburger-bar-2 {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.hamburger-bar-3 {
+  bottom: 0;
+}
+
+.menu.open .hamburger-bar-1 {
+  transform: translateY(7px) translateY(-50%) rotate(45deg);
+}
+
+.menu.open .hamburger-bar-2 {
+  opacity: 0;
+}
+
+.menu.open .hamburger-bar-3 {
+  transform: translateY(-7px) translateY(50%) rotate(-45deg);
+}
+
+.menu-overlay {
+  z-index: 89000;
+  padding-right: 2rem;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  text-align: end;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.menu-overlay .one li {
+  line-height: 4rem;
+  font-size: 2.7rem;
+}
+
+.menu-overlay .one .categorie span,
+.categories-list .categorie span {
+  font-weight: 500;
+}
+
+.categories-list {
+  display: flex;
+  gap: 2rem;
+}
+
+/* .menu-overlay .one .categorie sup {
+  font-size: 1.5rem;
+  font-style: oblique;
+  font-weight: 700;
+}
+
+.categories-list .categorie sup {
+  font-size: 0.8rem;
+  font-style: oblique;
+  font-weight: 700;
+} */
+
+.menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar li,
+.menu-overlay li {
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+  text-align: end;
+  /* text-transform: uppercase; */
+}
+
+.navbar .categories li:hover {
+  opacity: 1;
+}
+
+.categorie {
+  padding: 1rem;
+}
+
+
+
 header {
   padding-top: 6.5rem;
 
@@ -147,7 +412,7 @@ header {
   top: 0;
   margin: 0;
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/background.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/background.png');
   background-size: cover;
   background-repeat: no-repeat;
   padding: 4rem;
@@ -162,27 +427,135 @@ header {
   border: 1px solid white;
 }
 
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+
+}
 
 section {
-  margin: 0 auto;
-  width: 90%;
+  width: 100%;
+  /* margin: 0 auto; */
+}
 
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  /* gap: 1rem; */
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+
+.champ {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.champ * {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.flex {
+  margin: 0 auto;
+  gap: 5rem;
+  display: flex;
+}
+
+.billetterie-expo h2 {
+  margin-bottom: 2rem;
+}
+
+.billetterie-expo div {
+  display: flex;
+  align-items: flex-end;
+  gap: 3rem;
+  width: 70%;
+  margin-bottom: 5rem;
+}
+
+.billetterie-expo div img {
+  height: 17rem;
+}
+
+.breadcrumb {
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.breadcrumb a {
+  font-weight: 700;
+}
+
+.active-breadcrumb {
+  color: black !important;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane:first-child {
+  display: block;
+}
+
+#breadcrumbBillets,
+#breadcrumbConfirmation {
+  color: grey;
+}
+
+#step2,
+#step3 {
+  display: none;
+}
+
+#step3 p {
+  margin-bottom: 1.5rem;
+}
+
+span.error {
+  font-size: 0.8rem;
+  color: #ef233b;
+  display: block;
 }
 
 .recap {
   padding: 2rem 3rem;
   border: 1px solid black;
+  margin-bottom: 1.5rem;
 }
 
 .tarif {
   display: flex;
   justify-content: space-between;
-  margin: 2rem auto;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+.tarif h5 {
+  font-weight: 500;
+}
+
+.tarif:not(:last-child) {
+  margin-bottom: 2rem;
+
 }
 
 .tarif .prix {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 3rem;
 
 }
@@ -193,7 +566,41 @@ footer {
   justify-content: space-between;
   width: 90%;
   margin: 0 auto;
+  margin-top: 5rem !important;
+  gap: 1rem;
 }
 
+@media screen and (min-width:900px) {
+  .menu-overlay {
+    display: none;
+  }
+}
 
-/*# sourceMappingURL=style.css.map */
+@media screen and (max-width:900px) {
+
+  .navbar .home {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .categories .categories-list {
+    display: none;
+    transition: all 0.2s ease;
+  }
+
+
+  .flex {
+    flex-direction: column;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  .logo img {
+    width: 5rem;
+  }
+}

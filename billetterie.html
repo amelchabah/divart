@@ -13,148 +13,228 @@
     <link rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#000000">
-    <link rel="stylesheet" href="./scss/style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 
-    <title>Document</title>
+    <link rel="stylesheet" href="./scss/style.css">
+    <script src="js/billetterie.js"></script>
+    <script src="js/script.js"></script>
+
+    <title>Billetterie</title>
 </head>
 
 <body>
-    <nav aria-label="navbar" class="navbar">
-        <div class="logo">
-            <a href="./index.html" title="Retour à l'accueil"><img src="./assets/logo.svg" alt="logo divart"></a>
-        </div>
-        <div class="links">
-            <a href="./index.html" title="Découvrir">Découvrir</a>
-            <a href="./dispositif.html" title="Expérimenter">Expérimenter</a>
-            <a href="./billetterie.html" title="Réserver un billet">Réserver un billet</a>
-        </div>
-    </nav>
-    <header>
-        <nav aria-label="breadcrumb" class="breadcrumb">
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><span aria-current="page">Réserver</span></li>
+    <div class="menu-overlay">
+        <div class="overlay-menu">
+            <ul class="one">
+                <li><a href="./index.html" title="Découvrir">Découvrir</a></li>
+                <li><a href="./dispositif.html" title="Expérimenter">Expérimenter</a></li>
+                <li><a href="./billetterie.html" title="Réserver un billet">Réserver un billet</a></li>
             </ul>
-        </nav>
-    </header>
-    <section>
-        <h2>Acheter un billet</h2>
-        <div>
-            <img src="" alt="">
         </div>
-        <article>
-            <h3><span>Impressionne-moi, </span>une exposition impressionniste</h3>
-            <br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error aliquam suscipit quaerat, blanditiis ab
-                iure incidunt animi quo facere unde repudiandae ullam itaque voluptas perspiciatis vero sint fugit
-                maiores officia?</p>
-        </article>
-    </section>
-    <section>
-        <h2>Choisissez une date</h2>
-        <form>
-            <div>
-                <label for="date">Choisissez une date</label>
-                <div class="errorTxt"></div>
-                <input type="date" class="datepicker" name="date" required>
+        <div class="noise"></div>
+    </div>
+
+    <div class="nav difference" data-scroll>
+        <nav class="navbar fadein">
+            <div class="logo">
+                <a href="./index.html" title="Retour à l'accueil"><img src="./assets/logo.svg" alt="logo divart"></a>
             </div>
-            <label for="horaire">Choisissez un horaire</label>
-            <div class="errorTxt"></div>
-            <select id="horaire" name="horaire">
-                <option>-- Sélectionner une horaire --</option>
-                <option value="10-00">10:00</option>
-                <option value="11-00">11:00</option>
-                <option value="12-00">12:00</option>
-                <option value="13-00">13:00</option>
-                <option value="14-00">14:00</option>
-                <option value="15-00">15:00</option>
-                <option value="16-00">16:00</option>
-                <option value="17-00">17:00</option>
-                <option value="18-00">18:00</option>
-            </select>
-            <input type="submit" value="Réserver">
-    
-        </form>
-    </section>
-    <section>
-        <h2>
-            Choisissez un nombre de billets
-        </h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat voluptate commodi architecto amet molestias
-            minus recusandae laboriosam. Porro repellendus iusto nostrum commodi sapiente, odit modi fugiat voluptatem,
-            sed, perferendis dignissimos?</p>
-        <div class="container">
-            <div class="tarif">
-                <h4>Plein tarif</h4>
-                <div class="prix">
-                    <h4>5 €</h4>
-                    <select name="amount" id="adultsamount">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
+
+            <div class="categories">
+                <ul class="categories-list">
+                    <a href="./index.html" title="Découvrir">Découvrir</a>
+                    <a href="./dispositif.html" title="Expérimenter">Expérimenter</a>
+                    <a href="./billetterie.html" title="Réserver un billet">Réserver un billet</a>
+                </ul>
+                <div id="toggle-menu" class="menu">
+                    <div class="menu-link">
+                        <span class="hamburger-icon">
+                            <span class="hamburger-bar hamburger-bar-1"></span>
+                            <span class="hamburger-bar hamburger-bar-2"></span>
+                            <span class="hamburger-bar hamburger-bar-3"></span>
+                        </span>
+                    </div>
                 </div>
             </div>
-            <hr>
-            <div class="tarif">
-                <h4>Enseignants et étudiants de - 26 ans</h4>
-                <div class="prix">
-                    <h4>Gratuit</h4>
-                    <select name="amount" id="studentsamount">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
+        </nav>
+    </div>
+    <div class="wrapper">
+        <header>
+            <section class="billetterie-expo">
+                <h2>Acheter un billet</h2>
+                <!-- <div>
+                    <img src="./assets/livret.png" alt="">
+                    <article>
+                        <h3><span>Impressionne-moi, </span>une exposition impressionniste</h3>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error aliquam suscipit quaerat,
+                            blanditiis
+                            ab
+                            iure incidunt animi quo facere unde repudiandae ullam itaque voluptas perspiciatis vero sint
+                            fugit
+                            maiores officia?</p>
+                    </article>
+                </div> -->
+            </section>
+        </header>
+
+        <div class="flex">
+            <section>
+                <form action="" method="post" class="booking-form" id="booking-form">
+                    <div aria-label="breadcrumb" class="breadcrumb">
+                        <a href="#" id="breadcrumbDate" class="active-breadcrumb">Date & horaire&#160;&#160;</a>
+                        <span id="breadcrumbBillets"><span>>&#160;&#160;</span>Nombre de billets&#160;&#160;</span>
+                        <span id="breadcrumbConfirmation"><span>>&#160;&#160;</span>Coordonnées</span>
+                    </div>
+
+                    <div class="tab-content">
+                        <div id="step1" class="tab-pane">
+                            <h3>Dates & horaires</h3>
+                            <!-- action api.php -->
+                            <div class="champ">
+                                <label for="date">Choisissez une date</label><span style="color:red"> *</span>
+                                <div class="errorTxt"></div>
+                                <input type="date" class="datepicker" name="date" required>
+                            </div>
+                            <div class="champ">
+                                <label for="horaire">Choisissez un horaire</label><span style="color:red"> *</span>
+                                <div class="errorTxt"></div>
+                                <!-- <select id="horaire" name="horaire" required>
+                                    <option value="">-- Sélectionner une horaire --</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="18:00">18:00</option>
+                                </select> -->
+                                <div class="horaires">
+                                    <input type="radio" id="radio1" name="horaire" value="10:00" required>
+                                    <label for="radio1">10:00</label>
+                                    <input type="radio" id="radio2" name="horaire" value="11:00" required>
+                                    <label for="radio2">11:00</label>
+                                    <input type="radio" id="radio3" name="horaire" value="12:00" required>
+                                    <label for="radio3">12:00</label>
+                                    <input type="radio" id="radio4" name="horaire" value="13:00" required>
+                                    <label for="radio4">13:00</label>
+                                    <input type="radio" id="radio5" name="horaire" value="14:00">
+                                    <label for="radio5">14:00</label>
+                                    <input type="radio" id="radio6" name="horaire" value="15:00">
+                                    <label for="radio6">15:00</label>
+                                    <input type="radio" id="radio7" name="horaire" value="16:00">
+                                    <label for="radio7">16:00</label>
+                                    <input type="radio" id="radio8" name="horaire" value="17:00">
+                                    <label for="radio8">17:00</label>
+                                    <input type="radio" id="radio9" name="horaire" value="18:00">
+                                    <label for="radio9">18:00</label>
+                                </div>
+                            </div>
+                            <button class="next-btn next-btn1" type="button">Valider</button>
+                        </div>
+                        <div id="step2" class="tab-pane">
+                            <h3>
+                                Billets
+                            </h3>
+                            <p>Billet unique pour la visite de l'exposition.</p><br>
+                            <hr>
+                            <div class="container">
+                                <div class="tarif">
+                                    <h5>Plein tarif</h5>
+                                    <div class="prix">
+                                        <h5>Gratuit<span style="color:red"> *</span></h5>
+                                        <!-- <select name="amount" id="amount" required>
+                                            <option value="">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select> -->
+                                        <div class="amount">
+                                            <button class="counter"
+                                                onclick="this.parentNode.querySelector('#amount').stepDown()">-</button><input
+                                                type="number" min="1" max="5" name="amount" id="amount" disabled required
+                                                placeholder="0"><button class="counter"
+                                                onclick="this.parentNode.querySelector('#amount').stepUp()">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="next-btn next-btn2" id="billets-check" type="button">Valider</button>
+                        </div>
+                        <div id="step3" class="tab-pane">
+                            <h3>
+                                Coordonnées
+                            </h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat voluptate commodi
+                                architecto
+                                amet
+                                molestias
+                                minus recusandae laboriosam. Porro repellendus iusto nostrum commodi sapiente, odit
+                                modi
+                                fugiat
+                                voluptatem,
+                                sed, perferendis dignissimos?</p>
+                            <div class="booking-form">
+                                <fieldset>
+                                    <div class="champ">
+                                        <label for="prenom">Prénom</label><span style="color:red"> *</span>
+                                        <div class="errorTxt"></div>
+                                        <input type="text" class="prenom" name="prenom" id="prenom" placeholder="Prénom"
+                                            required>
+                                    </div>
+                                    <div class="champ">
+                                        <label for="nom">Nom</label><span style="color:red"> *</span>
+                                        <div class="errorTxt"></div>
+                                        <input type="text" class="nom" name="nom" id="nom" placeholder="Nom" required>
+                                    </div>
+
+                                </fieldset>
+                                <div class="champ">
+                                    <label for="mail">Adresse mail</label><span style="color:red"> *</span>
+                                    <div class="errorTxt"></div>
+                                    <input type="email" class="mail" name="mail" id="mail" placeholder="exemple@mail.fr"
+                                        required>
+                                </div>
+                                <input type="submit" class="next-btn next-btn3" type="button"
+                                    value="Confirmer la réservation" id="confirm-check">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+                <!-- </div> -->
+            </section>
+            <section>
+                <div class="recap">
+                    <h3>Impressionne-moi, une exposition impressionniste</h3>
+                    <h5><b>Mode d'obtention :</b> e-ticket (gratuit)</h5><br>
+                    <h5 class="recap-date"></h5>
+                    <article></article>
+
 
                 </div>
-            </div>
-            <hr>
-            <div class="tarif">
-                <h4>Enfants et - 18 ans</h4>
-                <div class="prix">
-                    <h4>Gratuit</h4>
-                    <select name="amount" id="kidsamount">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-            </div>
+                <h6>Les billets ne sont ni échangeables ni remboursables conformément à nos conditions générales de
+                    vente
+                    <br>
+                    Nous vous informons que les galeries sont évacuées 15 minutes avant l’heure de fermeture de la
+                    Fondation.<br>
+                    En cas de besoin, vous pouvez nous appeler au 01 40 69 96 00 de 10h à 18h, du lundi au samedi.
+                </h6>
+            </section>
         </div>
-    </section>
-    <section>
-        <div class="recap">
-            <h4>Impressionne-moi, une exposition impressionniste</h4>
-            <h5>Vendredi 17 février</h5>
-            <h5>13:00</h5>
-            <hr>
-            <div class="tarif">
-                <h4>Enfants et - 18 ans</h4>
-                <div class="prix">
-                    <h4>Gratuit</h4>
-                    <h4>
-                        x1
-                    </h4>
-                </div>
-            </div>
-            <hr>
-            <div class="tarif">
-                <h3>Total</h3>
-                <h4>Gratuit</h4>
-            </div>
-        </div>
-        <h6>Les billets ne sont ni échangeables ni remboursables conformément à nos conditions générales de vente.</h6>
-        <input type="submit" value="Valider votre réservation">
-    </section>
+
+    </div>
+
+    </div>
+
     <footer>
         <div class="logo">
             <img src="./assets/logo.svg" alt="logo divart">

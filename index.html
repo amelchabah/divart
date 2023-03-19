@@ -6,6 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="keywords"
+        content="impressionnisme, divart, exposition, art, exposition d'art, ar, réalité augmentée, van gogh">
+    <meta name="description" content="Impressionne-moi, présentée par DivArt">
+    <meta name="author" content="DivArt">
+
+    <meta property="og:site_name" content="Impressionne-moi - DivArt">
+    <meta property="og:locale" content="fr_fr">
+    <meta property="og:title" content="Impressionne-moi, présentée par DivArt">
+    <meta property="og:type" content="siteweb" />
+    <!-- <meta property="og:image" content="https://amel.chabah.butmmi.o2switch.site/img/profilepicture.jpg"> -->
+    <!-- <meta property="og:url" content="https://amel.chabah.butmmi.o2switch.site/"> -->
+    <meta property="og:description"
+        content="Impressionne-moi est une exposition d'impressionnisme sur les 4 saisons, présentée par DivArt">
+
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16x16.png">
@@ -14,22 +28,51 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#000000">
 
-    <link rel="stylesheet" href="./scss/style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-    <title>Impressionne-moi, présenté par Div'art</title>
+    <link rel="stylesheet" href="./scss/style.css">
+    <script src="./js/script.js" defer></script>
+
+    <title>Impressionne-moi, par DivArt</title>
 </head>
 
 <body>
-    <nav aria-label="navbar" class="navbar whitenavbar">
-        <div class="logo">
-            <a href="./index.html" title="Retour à l'accueil"><img src="./assets/logoblanc.svg" alt="logo divart"></a>
+    <div class="menu-overlay">
+        <div class="overlay-menu">
+            <ul class="one">
+                <li><a href="./index.html" title="Découvrir">Découvrir</a></li>
+                <li><a href="./dispositif.html" title="Expérimenter">Expérimenter</a></li>
+                <li><a href="./billetterie.html" title="Réserver un billet">Réserver un billet</a></li>
+            </ul>
         </div>
-        <div class="links">
-            <a href="./index.html" title="Découvrir">Découvrir</a>
-            <a href="./dispositif.html" title="Expérimenter">Expérimenter</a>
-            <a href="./billetterie.html" title="Réserver un billet">Réserver un billet</a>
-        </div>
-    </nav>
+        <div class="noise"></div>
+    </div>
+
+    <div class="nav difference" data-scroll>
+        <nav class="navbar fadein">
+            <div class="logo">
+                <a href="./index.html" title="Retour à l'accueil"><img src="./assets/logo.svg" alt="logo divart"></a>
+            </div>
+
+            <div class="categories">
+                <ul class="categories-list">
+                    <a href="./index.html" title="Découvrir">Découvrir</a>
+                    <a href="./dispositif.html" title="Expérimenter">Expérimenter</a>
+                    <a href="./billetterie.html" title="Réserver un billet">Réserver un billet</a>
+                </ul>
+                <div id="toggle-menu" class="menu">
+                    <div class="menu-link">
+                        <span class="hamburger-icon">
+                            <span class="hamburger-bar hamburger-bar-1"></span>
+                            <span class="hamburger-bar hamburger-bar-2"></span>
+                            <span class="hamburger-bar hamburger-bar-3"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
     <header class="indexheader">
         <div class="intro">
             <h1>Impressionne-moi</h1><br>
