@@ -45,7 +45,7 @@
                 <ul class="categories-list">
                     <a href="./index.html" title="Découvrir">Découvrir</a>
                     <a href="./dispositif.html" title="Expérimenter">Expérimenter</a>
-                    <a href="./billetterie.html" title="Réserver un billet">Réserver un billet</a>
+                    <a href="./billetterie.html" title="Réserver un billet"><b>Réserver un billet</b></a>
                 </ul>
                 <div id="toggle-menu" class="menu">
                     <div class="menu-link">
@@ -79,7 +79,7 @@
             </section>
         </header>
 
-        <div class="flex">
+        <main class="flex">
             <section>
                 <form action="" method="post" class="booking-form" id="booking-form">
                     <div aria-label="breadcrumb" class="breadcrumb">
@@ -93,12 +93,12 @@
                             <h3>Dates & horaires</h3>
                             <!-- action api.php -->
                             <div class="champ">
-                                <label for="date">Choisissez une date</label><span style="color:red"> *</span>
+                                <label for="date">Choisissez une date<span style="color:red"> *</span></label>
                                 <div class="errorTxt"></div>
-                                <input type="date" class="datepicker" name="date" required>
+                                <input type="date" id="date" class="datepicker" name="date" required>
                             </div>
                             <div class="champ">
-                                <label for="horaire">Choisissez un horaire</label><span style="color:red"> *</span>
+                                <label for="horaire">Choisissez un horaire<span style="color:red"> *</span></label>
                                 <div class="errorTxt"></div>
                                 <!-- <select id="horaire" name="horaire" required>
                                     <option value="">-- Sélectionner une horaire --</option>
@@ -157,8 +157,8 @@
                                         <div class="amount">
                                             <button class="counter"
                                                 onclick="this.parentNode.querySelector('#amount').stepDown()">-</button><input
-                                                type="number" min="1" max="5" name="amount" id="amount" readonly required
-                                                placeholder="0"><button class="counter"
+                                                type="number" min="1" max="5" name="amount" id="amount" readonly
+                                                required placeholder="0"><button class="counter"
                                                 onclick="this.parentNode.querySelector('#amount').stepUp()">+</button>
                                         </div>
                                     </div>
@@ -183,20 +183,20 @@
                             <div class="booking-form">
                                 <fieldset>
                                     <div class="champ">
-                                        <label for="prenom">Prénom</label><span style="color:red"> *</span>
+                                        <label for="prenom">Prénom<span style="color:red"> *</span></label>
                                         <div class="errorTxt"></div>
                                         <input type="text" class="prenom" name="prenom" id="prenom" placeholder="Prénom"
                                             required>
                                     </div>
                                     <div class="champ">
-                                        <label for="nom">Nom</label><span style="color:red"> *</span>
+                                        <label for="nom">Nom<span style="color:red"> *</span></label>
                                         <div class="errorTxt"></div>
                                         <input type="text" class="nom" name="nom" id="nom" placeholder="Nom" required>
                                     </div>
 
                                 </fieldset>
                                 <div class="champ">
-                                    <label for="mail">Adresse mail</label><span style="color:red"> *</span>
+                                    <label for="mail">Adresse mail<span style="color:red"> *</span></label>
                                     <div class="errorTxt"></div>
                                     <input type="email" class="mail" name="mail" id="mail" placeholder="exemple@mail.fr"
                                         required>
@@ -229,27 +229,38 @@
                     En cas de besoin, vous pouvez nous appeler au 01 40 69 96 00 de 10h à 18h, du lundi au samedi.
                 </h6>
             </section>
-        </div>
+        </main>
 
     </div>
 
     </div>
 
     <footer>
-        <div class="logo">
-            <img src="./assets/logo.svg" alt="logo divart">
-        </div>
-        <ul>
-            <li><a href="./index.html" title="Découvrir l'exposition"></a>Découvrir</a></li>
-            <li><a href="./billetterie.html" title="Dispositif interactif">Expérimenter</a></li>
-            <li><a href="./billetterie.html" title="Réserver votre billet">Réserver votre billet</a></li>
-            <li><a href="./mentions.html" title="Mentions légales">Mentions légales</a></li>
+        <div class="flex">
+            <div class="logo">
+                <img src="./assets/logo.svg" alt="logo divart">
+            </div>
+            <ul>
+                <li><a href="./index.html" title="Découvrir l'exposition"></a>Découvrir</a></li>
+                <li><a href="./billetterie.html" title="Dispositif interactif">Expérimenter</a></li>
+                <li><a href="./billetterie.html" title="Réserver votre billet">Réserver votre billet</a></li>
 
-        </ul>
-        <div class="infos">
-            <p>2 Rue Albert Einstein<br>77420 Champs Sur Marne</p>
-            <a href="" title="Page Instagram"><img src="" alt=""></a>
-            <a href="" title="Page Facebook"><img src="" alt=""></a>
+            </ul>
+            <div class="infos">
+                <ul>
+                    <li>2 Rue Albert Einstein</li>
+                    <li>77420 Champs Sur Marne</li>
+                    <li><a href="" title="Page Instagram"><img src="./assets/instagram.png" alt="Page Instagram"></a>
+                        <a href="" title="Page Facebook"><img src="./assets/instagram.png" alt="Page Facebook"></a>
+                    </li>
+
+                    <ul>
+
+            </div>
+        </div>
+        <div class="categories-list">
+            <a href="./mentions.html">Mentions légales</a>
+            <h5>Tous droits réservés, Divart Museum © 2023</h5>
         </div>
     </footer>
 </body>

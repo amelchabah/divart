@@ -2,6 +2,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // form
 
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
+
+    if (dd < 10) {
+        dd = '0' + dd;
+    }
+
+    if (mm < 10) {
+        mm = '0' + mm;
+    }
+
+    today = yyyy + '-' + mm + '-' + dd;
+
+    document.getElementById("date").setAttribute("min", today);
+
+
     //generation du message d'erreur lorsqu'une donnée est incorrecte
     let v = $("#booking-form").validate({
         errorElement: "span",
@@ -19,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         range: jQuery.validator.format("Veuillez entrer une valeur située entre {0} et {1}."),
         max: jQuery.validator.format("Veuillez entrer une valeur inférieure ou égale à {0}."),
         min: jQuery.validator.format("Veuillez entrer une valeur supérieure ou égale à {0}.")
-    
+
 
     });
 
@@ -100,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    $('form').on('click', 'button:not([type="submit"])', function(e){
+    $('form').on('click', 'button:not([type="submit"])', function (e) {
         e.preventDefault();
-      })
+    })
 });

@@ -29,9 +29,23 @@
     <meta name="theme-color" content="#000000">
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
 
     <link rel="stylesheet" href="./scss/style.css">
     <script src="./js/script.js" defer></script>
+    <script src="./js/slider.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
     <title>Impressionne-moi, par DivArt</title>
 </head>
@@ -56,7 +70,7 @@
 
             <div class="categories">
                 <ul class="categories-list">
-                    <a href="./index.html" title="Découvrir">Découvrir</a>
+                    <a href="./index.html" title="Découvrir"><b>Découvrir</b></a>
                     <a href="./dispositif.html" title="Expérimenter">Expérimenter</a>
                     <a href="./billetterie.html" title="Réserver un billet">Réserver un billet</a>
                 </ul>
@@ -85,21 +99,126 @@
         </a>
     </header>
 
-    <footer>
-        <div class="logo">
-            <img src="./assets/logo.svg" alt="logo divart">
-        </div>
-        <ul>
-            <li><a href="./index.html" title="Découvrir l'exposition"></a>Découvrir</a></li>
-            <li><a href="./billetterie.html" title="Dispositif interactif">Expérimenter</a></li>
-            <li><a href="./billetterie.html" title="Réserver votre billet">Réserver votre billet</a></li>
-            <li><a href="./mentions.html" title="Mentions légales">Mentions légales</a></li>
+    <main class="wrapper">
+        <aside>
+            <h4>Événement</h4>
+            <p>Du 26 mars au 26 mars 2023.</p>
+            <br>
+            <h4>Lieu</h4>
+            <p>IUT Marne La Vallée,<br>Champs-sur-Marne</p>
+            <br>
+            <h4>Tarif</h4>
+            <p>Gratuit</p>
+        </aside>
+        <article>
+            <h2>Redécouvrez l'impressionnisme</h2>
+            <p><b>DivArt</b> vous invite à plonger au cœur des quatre saisons à travers l’exposition
+                <b><i>Impressionne-moi</i></b>. Celle-ci
+                vous présente une collection de divers tableaux impressionnistes passants de <i>Claude Monet</i> à
+                <i>Berthe Morisot</i>,
+                de <i>John Singer Sargent</i> à <i>Camille Pissarro</i>, ou encore d’<i>Alfred Sisley</i> à <i>John
+                    Russell</i>. Ce voyage vous permettra de
+                porter un regard nouveau sur le courant artistique impressionniste au fil des saisons et des couleurs.
 
-        </ul>
-        <div class="infos">
-            <p>2 Rue Albert Einstein<br>77420 Champs Sur Marne</p>
-            <a href="" title="Page Instagram"><img src="" alt=""></a>
-            <a href="" title="Page Facebook"><img src="" alt=""></a>
+            </p>
+        </article>
+    </main>
+    <div class="popup popup1">
+        <h5>Fermer</h5>
+        <figure>
+            <img src="./assets/tableaux/camille_versailles.jpg" alt="">
+            <figcaption><b><i>La route de Versailles, Louveciennes, neige</i></b><br>Camille Pissarro, 1870</figcaption>
+        </figure>
+    </div>
+    <div class="popup popup2">
+        <h5>Fermer</h5>
+        <figure>
+            <img src="./assets/tableaux/sargent_autumn.jpg" alt="">
+            <figcaption><b><i>Autumn leaves</i></b><br>John Singer Sargent, 1913</figcaption>
+        </figure>
+    </div>
+    <div class="popup popup3">
+        <h5>Fermer</h5>
+
+        <figure>
+            <img src="./assets/tableaux/berthe_summer.jpeg" alt="">
+            <figcaption><b><i>Jour d’été</i></b><br>Berthe Morisot, 1879</figcaption>
+        </figure>
+    </div>
+    <div class="popup popup4">
+        <h5>Fermer</h5>
+
+        <figure>
+
+            <img src="./assets/tableaux/monet_printemps.jpg" alt="">
+            <figcaption><b><i>Printemps</i></b><br>Claude Monet, 1886</figcaption>
+        </figure>
+
+    </div>
+    <div class="popup popup5">
+        <h5>Fermer</h5>
+
+        <figure>
+            <img src="./assets/tableaux/russell_summer.jpg" alt="">
+            <figcaption><b><i>In the morning, Alpes Maritimes from Antibes </i></b><br>John Russell, 1890</figcaption>
+        </figure>
+
+    </div>
+    <div class="popup popup6">
+        <h5>Fermer</h5>
+
+        <figure>
+            <img src="./assets/tableaux/moret_printemps.jpg" alt="">
+            <figcaption><b><i>Printemps à Moret sur la Rivière Loing</i></b><br>Alfred Sisley, 1877</figcaption>
+        </figure>
+
+    </div>
+
+    <div class="wrapper">
+        <div data-aos="fade-in" data-aos-duration="2000" data-aos-delay="300" id="destinations" class="owl-container">
+            <div class="owl-carousel owl-theme">
+                <div class="item item1" style="background-image: url('./assets/tableaux/camille_versailles.jpg');">
+                </div>
+                <div class="item item2" style="background-image: url('./assets/tableaux/sargent_autumn.jpg');">
+                </div>
+                <div class="item item3" style="background-image: url('./assets/tableaux/berthe_summer.jpeg');">
+                </div>
+                <div class="item item4" style="background-image: url('./assets/tableaux/monet_printemps.jpg');">
+                </div>
+                <div class="item item5" style="background-image: url('./assets/tableaux/russell_summer.jpg');">
+                </div>
+                <div class="item item6" style="background-image: url('./assets/tableaux/moret_printemps.jpg');">
+                </div>
+            </div>
+            <h3>Quelques oeuvres de l'exposition</h3>
+        </div>
+    </div>
+    <footer>
+        <div class="flex">
+            <div class="logo">
+                <img src="./assets/logo.svg" alt="logo divart">
+            </div>
+            <ul>
+                <li><a href="./index.html" title="Découvrir l'exposition"></a>Découvrir</a></li>
+                <li><a href="./billetterie.html" title="Dispositif interactif">Expérimenter</a></li>
+                <li><a href="./billetterie.html" title="Réserver votre billet">Réserver votre billet</a></li>
+
+            </ul>
+            <div class="infos">
+                <ul>
+                    <li>2 Rue Albert Einstein</li>
+                    <li>77420 Champs Sur Marne</li>
+                    <li><a href="" title="Page Instagram"><img src="./assets/instagram.png" alt="Page Instagram"></a>
+                        <a href="" title="Page Facebook"><img src="./assets/instagram.png" alt="Page Facebook"></a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="categories-list">
+            <a href="./mentions.html">Mentions légales</a>
+            <h5>Tous droits réservés, Divart Museum © 2023</h5>
+            <h5>Ouvert tous les jours de 10h à 18h</h5>
         </div>
     </footer>
 
