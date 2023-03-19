@@ -576,6 +576,7 @@ main.wrapper article {
 
   overflow: hidden;
   transition: all 0.3s ease-out;
+  cursor: pointer;
 }
 
 .item a:hover {
