@@ -422,9 +422,20 @@ header {
   justify-content: space-between;
 }
 
+.indexheader h2 {
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+}
+
 .indexheader .button {
   padding: 1.5rem 2rem;
   border: 1px solid white;
+}
+
+.button  * {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
 }
 
 .wrapper {
@@ -435,13 +446,6 @@ header {
 
 section {
   width: 100%;
-  /* margin: 0 auto; */
-}
-
-.booking-form {
-  display: flex;
-  flex-direction: column;
-  /* gap: 1rem; */
 }
 
 fieldset {
