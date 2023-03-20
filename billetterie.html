@@ -81,7 +81,7 @@
 
         <main class="flex">
             <section>
-                <form action="" method="post" class="booking-form" id="booking-form">
+                <form action="./api/controller.php" method="post" class="booking-form" id="booking-form">
                     <div aria-label="breadcrumb" class="breadcrumb">
                         <a href="#" id="breadcrumbDate" class="active-breadcrumb">Date & horaire&#160;&#160;</a>
                         <span id="breadcrumbBillets"><span>>&#160;&#160;</span>Nombre de billets&#160;&#160;</span>
@@ -100,18 +100,6 @@
                             <div class="champ">
                                 <label for="horaire">Choisissez un horaire<span style="color:red"> *</span></label>
                                 <div class="errorTxt"></div>
-                                <!-- <select id="horaire" name="horaire" required>
-                                    <option value="">-- Sélectionner une horaire --</option>
-                                    <option value="10:00">10:00</option>
-                                    <option value="11:00">11:00</option>
-                                    <option value="12:00">12:00</option>
-                                    <option value="13:00">13:00</option>
-                                    <option value="14:00">14:00</option>
-                                    <option value="15:00">15:00</option>
-                                    <option value="16:00">16:00</option>
-                                    <option value="17:00">17:00</option>
-                                    <option value="18:00">18:00</option>
-                                </select> -->
                                 <div class="horaires">
                                     <input type="radio" id="radio1" name="horaire" value="10:00" required>
                                     <label for="radio1">10:00</label>
@@ -214,7 +202,7 @@
             </section>
             <section>
                 <div class="recap">
-                    <h3>Impressionne-moi, une exposition impressionniste</h3>
+                    <h3><b>Impressionne-moi, </b><span>une exposition au fil des saisons</span></h3>
                     <h5><b>Mode d'obtention :</b> e-ticket (gratuit)</h5><br>
                     <h5 class="recap-date"></h5>
                     <article></article>
