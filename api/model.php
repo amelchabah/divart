@@ -46,7 +46,6 @@ function deleteBooking($id)
 {
     $db=dbConnect();
     $query=$db->prepare("DELETE FROM reservations WHERE id=$id");
-    $query->execute();
     if ($query->execute()){
         $response = array(
             'status' => 1,
