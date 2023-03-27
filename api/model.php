@@ -2,6 +2,7 @@
 
 function dbConnect()
 {
+    // $db = new PDO('mysql:host=localhost;dbname=divart;port:3306', 'root', '');
     $db = new PDO('mysql:host=localhost;dbname=divart;port:3306', 'root', '');
     return $db;
 }
@@ -9,7 +10,7 @@ function dbConnect()
 function getAllBookings()
 {
     $db=dbConnect();
-    $query=$db->query("SELECT * FROM reservations");
+    $query=$db->query("SELECT * FROM reservations ORDER BY date");
     return $query->fetchAll(PDO::FETCH_ASSOC);
 }
 
@@ -60,5 +61,3 @@ function deleteBooking($id)
     header('Content-Type: application:json');
     echo json_encode($response);
 }
-
-?>

@@ -3,20 +3,19 @@ document.addEventListener("DOMContentLoaded", function () {
     // form
 
     var today = new Date();
-    var dd = today.getDate();
-    var mm = today.getMonth() + 1; //January is 0!
-    var yyyy = today.getFullYear();
+    var dd = today.getDate(); //récuperer le jour
+    var mm = today.getMonth() + 1; //récupérer le mois, +1 car janvier = 0
+    var yyyy = today.getFullYear(); //récupérer l'année
 
     if (dd < 10) {
         dd = '0' + dd;
-    }
+    } //si la valeur du jour est inférieure à 10, ajouter un 0 devant le chiffre
 
     if (mm < 10) {
         mm = '0' + mm;
-    }
+    } //de même pour les mois
 
     today = yyyy + '-' + mm + '-' + dd;
-
     document.getElementById("date").setAttribute("min", today);
 
 
@@ -37,8 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
         range: jQuery.validator.format("Veuillez entrer une valeur située entre {0} et {1}."),
         max: jQuery.validator.format("Veuillez entrer une valeur inférieure ou égale à {0}."),
         min: jQuery.validator.format("Veuillez entrer une valeur supérieure ou égale à {0}.")
-
-
     });
 
     //au clic du bouton d'acces a l'etape 2...
@@ -81,7 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-
     //au clic du bouton de retour a l'etape 1 (fil d'ariane), cacher la tab, faire apparaitre l'etape 1
     $("#breadcrumbDate").click(function () {
         $(".tab-pane").hide();
@@ -93,7 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
         $("#step2").css('display', 'none');
         $("#step3").css('display', 'none');
     });
-
 
     //au clic du bouton de retour a l'etape 2 (fil d'ariane), cacher la tab, faire apparaitre l'etape 2
     $("#breadcrumbBillets").click(function () {

@@ -23,13 +23,13 @@ $('.owl-carousel').owlCarousel({
 
 for (let i = 0; i < 7; i++) {
     $(`.item${i}`).click(function () {
-        $(`.popup${i}`).fadeIn(1000);
+        $(`.popup${i}`).fadeIn(900);
         $(`.popup${i}`).css('display', 'flex');
         e.preventDefault();
     });
 
     $(`.popup${i} h5`).click(function () {
-        $(`.popup${i}`).fadeOut(1000);
+        $(`.popup${i}`).fadeOut(900);
         e.preventDefault();
     });
 };
