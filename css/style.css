@@ -148,19 +148,19 @@ select {
 
 }
 
-button,
+button, .button,
 input[type="submit"] {
   font-family: 'dm sans', sans-serif;
   width: fit-content;
   background-color: var(--color-black);
-  color: white;
+  color: white !important;
   padding: 0.8rem 1.5rem;
   border: none;
   margin-top: 1.5rem;
   float: right;
 }
 
-button:hover,
+button:hover, .button:hover,
 input[type="submit"]:hover {
   background-color: black;
 }
@@ -517,6 +517,7 @@ header {
   padding: 1.5rem 2rem;
   border: 1px solid var(--color-white);
   transition: 0.2s ease;
+  background: transparent;
 }
 
 .indexheader .button:hover {
@@ -845,6 +846,22 @@ footer .flex {
 
 footer .categories-list {
   margin-top: 2rem;
+}
+
+.thanks {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.thanks .wrapper {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (max-width:1024px) {

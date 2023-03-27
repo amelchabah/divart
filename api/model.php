@@ -38,7 +38,8 @@ function addBooking($date, $horaire, $amount, $prenom, $nom, $mail)
         );
     }
 
-    header('Content-Type: application/json');
+    // header('Content-Type: application/json');
+    header('Location: ../merci.html');
     echo json_encode($response);
 
 }
