@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    if (localStorage.getItem('teaser') == 'true') {
+        $('#teaser').hide();
+    }
+    localStorage.setItem('teaser', 'true');
+
     $(".menu-link").click(function (event) {
         event.preventDefault();
         $(".menu-overlay").toggleClass("open");
@@ -8,8 +13,8 @@ $(document).ready(function () {
     $('.one .categorie').click(function () {
         $(".menu-overlay").toggleClass("open");
         $(".menu").toggleClass("open");
-
     });
+
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
         if (scroll > 700) {
@@ -24,12 +29,10 @@ $(document).ready(function () {
         }
     });
 
-
     $('#teaserend').click(function () {
         $('#teaser').fadeOut(1000);
         $("#teaser video").prop('muted', true);
     });
-
 
     $("#teaser video").prop('muted', true);
     $("#sound").click(function () {
@@ -42,22 +45,10 @@ $(document).ready(function () {
         }
     });
 
-    // if (localStorage.getItem("teaser") !== 'true') {
-    //     // sessionStorage.setItem('key', 'value'); pair
-    //     localStorage.setItem("teaser", "true");
-    //     // Calling the bootstrap modal
-    //     $("#teaser").hide();
-    //  }
-
-
     let vid = document.getElementById("teaservideo");
     vid.onended = function () {
         $('#teaser').fadeOut(1000);
         // $('#teaser').css('display', "none");
     };
-
-
-     
-
 
 });

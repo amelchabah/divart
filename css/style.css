@@ -77,7 +77,7 @@ a:active,
 a:visited,
 a:focus {
   text-decoration: none;
-  color: inherit;
+  color: unset;
   cursor: default;
 }
 
@@ -385,13 +385,14 @@ input[type=radio]:checked+label {
 
 .categories-list a:hover,
 .popup h5:hover,
-footer .nav a:hover,
+footer .nav a:hover, .tutorialwrapper a:hover,
 #teaser .space-between h5:hover {
   cursor: default;
 }
 
 .whitenavbar .categories-list a:after,
 .popup h5:after,
+.tutorialwrapper li span a:after,
 #teaser .space-between h5:after {
   background: var(--color-white) !important;
   /* mix-blend-mode: difference; */
@@ -401,7 +402,8 @@ footer .nav a:hover,
 .popup h5:after,
 footer .nav a:after,
 .one a:after,
-#teaser .space-between h5:after {
+#teaser .space-between h5:after,
+.tutorialwrapper li span a:after {
   content: "";
   display: block;
   height: 1.5px;
@@ -417,6 +419,7 @@ footer .nav a:after,
 .popup h5:hover:after,
 footer .nav a:hover:after,
 .one a:hover:after,
+.tutorialwrapper li span a:hover:after,
 #teaser .space-between h5:hover:after {
   width: 100%;
   opacity: 0.9;
@@ -522,7 +525,7 @@ header {
 
 .indexheader .button:hover {
   background-color: var(--color-white);
-  color: var(--color-black);
+  color: var(--color-black) !important;
   transition: 0.2s ease;
 }
 
@@ -535,6 +538,7 @@ header {
 .wrapper {
   width: 80%;
   margin: 0 auto;
+  min-height: 100vh;
 }
 
 main.wrapper {
@@ -730,7 +734,7 @@ main.flex {
 }
 
 .billetterie-expo h2 {
-  margin-bottom: 2rem;
+  margin: 1.5rem 0 2rem;
 }
 
 .billetterie-expo div {

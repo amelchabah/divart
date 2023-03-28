@@ -21,6 +21,10 @@ body {
 }
 
 .qr {
+    display: flex;
+    gap: 1rem;
+    align-items: end;
+    flex-direction: column;
     margin: 0 3rem;
 }
 
