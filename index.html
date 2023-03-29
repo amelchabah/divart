@@ -53,11 +53,16 @@
 <body>
     <div id="teaser">
         <video autoplay id="teaservideo">
-            <source src="./assets/video.mp4" type="video/mp4">
+            <source src="./assets/teaser.mp4" type="video/mp4">
         </video>
         <div class="space-between">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" id="sound"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M320 64c0-12.6-7.4-24-18.9-29.2s-25-3.1-34.4 5.3L131.8 160H64c-35.3 0-64 28.7-64 64v64c0 35.3 28.7 64 64 64h67.8L266.7 471.9c9.4 8.4 22.9 10.4 34.4 5.3S320 460.6 320 448V64z"/></svg>
-            <a href="#" id="teaserend"><h5>Accéder au site</h5></a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" id="sound">
+                <path
+                    d="M320 64c0-12.6-7.4-24-18.9-29.2s-25-3.1-34.4 5.3L131.8 160H64c-35.3 0-64 28.7-64 64v64c0 35.3 28.7 64 64 64h67.8L266.7 471.9c9.4 8.4 22.9 10.4 34.4 5.3S320 460.6 320 448V64z" />
+            </svg>
+            <a href="#" id="teaserend">
+                <h5>Accéder au site</h5>
+            </a>
         </div>
     </div>
     <div class="menu-overlay">
@@ -99,18 +104,20 @@
 
     <header class="indexheader">
         <video autoplay muted loop id="myVideo">
-            <source src="./assets/video.mp4" type="video/mp4">
+            <source src="./assets/teaser.mp4" type="video/mp4">
         </video>
-
-        <div class="intro">
-            <h1>Impressionne-moi</h1><br>
-            <h2>L'exposition au fil des saisons</h2>
-        </div>
-        <a href="./billetterie.html" title="acheter un billet">
-            <div class="button">
-                <h3>Acheter un billet</h3>
+        <section>
+            <div class="intro">
+                <h1>Impressionne-moi</h1><br>
+                <h2>L'exposition au fil des saisons</h2>
             </div>
-        </a>
+            <a href="./billetterie.html" title="acheter un billet">
+                <div class="button">
+                    <h3>Acheter un billet</h3>
+                </div>
+            </a>
+        </section>
+
     </header>
 
     <main class="wrapper">
@@ -137,6 +144,27 @@
             </p>
         </article>
     </main>
+    <section class="wrapper center">
+        <video autoplay controls muted id="arvideo">
+            <source src="./assets/teaser.mp4" type="video/mp4">
+        </video>
+    </section>
+    <section class="dispositif-intro">
+        <div class="wrapper">
+            <article>
+                <h2>Plongez dans une expérience de réalité augmentée</h2>
+                <h3>Une nouvelle manière de découvrir l'impressionnisme</h3>
+                <h4>Redécouvrez Impressionne-moi sous un nouvel angle qui s'inscrit dans l'ère du temps. Vivez une
+                    expérience immersive inédite grâce à notre <b>dispositif de réalité augmentée, accessible sur tous
+                        les appareils, n'importe où, n'importe quand.</b></h4>
+                <br><br>
+                <a href="./dispositif.html">
+                    <h4><i>Testez-le dès maintenant.</i></h4>
+                </a>
+            </article>
+            <img src="./assets/phone.png" alt="dispositif interactif">
+        </div>
+    </section>
     <div class="popup popup1">
         <h5 title="Fermer le popup">Fermer</h5>
         <figure>
@@ -211,10 +239,15 @@
             </ul>
             <div class="infos">
                 <ul>
+                    <li><a class="link" href="https://divart.antona.butmmi.o2switch.site/" target="_blank">Agence DivArt</a></li>
                     <li>2 Rue Albert Einstein</li>
                     <li>77420 Champs Sur Marne</li>
-                    <li><a href="https://www.instagram.com/divartagency/" target="_blank" title="Page Instagram"><img src="./assets/instagram.png" alt="Page Instagram"></a>
-                        <a href="" title="Page Facebook"><img src="./assets/instagram.png" alt="Page Facebook"></a>
+                    <li><a class="socials" href="https://www.instagram.com/divartagency/" target="_blank"
+                            title="Page Instagram"><img src="./assets/instagram.png" alt="Page Instagram"></a>
+                        <a class="socials"
+                            href="https://www.facebook.com/people/Div-Art/pfbid022Dg1ZR2wyr9koFQW2sumJiwQBKz5QqXyJAhamenUsHbLt19QSbhjKnwCZz4MC2Cyl/"
+                            target="_blank" title="Page Facebook"><img src="./assets/facebook.png"
+                                alt="Page Facebook"></a>
                     </li>
                 </ul>
             </div>
