@@ -81,6 +81,11 @@ a:focus {
   cursor: default;
 }
 
+h6 a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 h1 {
   font-family: "playfair display", serif;
   font-style: italic;
@@ -118,6 +123,11 @@ h5 {
 
 }
 
+h6 {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
 ul {
   padding-left: 0;
   margin: 0;
@@ -148,7 +158,8 @@ select {
 
 }
 
-button, .button,
+button,
+.button,
 input[type="submit"] {
   font-family: 'dm sans', sans-serif;
   width: fit-content;
@@ -160,7 +171,8 @@ input[type="submit"] {
   float: right;
 }
 
-button:hover, .button:hover,
+button:hover,
+.button:hover,
 input[type="submit"]:hover {
   background-color: black;
 }
@@ -385,14 +397,13 @@ input[type=radio]:checked+label {
 
 .categories-list a:hover,
 .popup h5:hover,
-footer .nav a:hover, .tutorialwrapper a:hover,
+footer .nav a:hover,
 #teaser .space-between h5:hover {
   cursor: default;
 }
 
 .whitenavbar .categories-list a:after,
 .popup h5:after,
-.tutorialwrapper li span a:after,
 #teaser .space-between h5:after {
   background: var(--color-white) !important;
   /* mix-blend-mode: difference; */
@@ -402,8 +413,7 @@ footer .nav a:hover, .tutorialwrapper a:hover,
 .popup h5:after,
 footer .nav a:after,
 .one a:after,
-#teaser .space-between h5:after,
-.tutorialwrapper li span a:after {
+#teaser .space-between h5:after {
   content: "";
   display: block;
   height: 1.5px;
@@ -419,7 +429,6 @@ footer .nav a:after,
 .popup h5:hover:after,
 footer .nav a:hover:after,
 .one a:hover:after,
-.tutorialwrapper li span a:hover:after,
 #teaser .space-between h5:hover:after {
   width: 100%;
   opacity: 0.9;
@@ -538,7 +547,6 @@ header {
 .wrapper {
   width: 80%;
   margin: 0 auto;
-  min-height: 100vh;
 }
 
 main.wrapper {
@@ -782,8 +790,11 @@ main.flex {
   display: none;
 }
 
-#step3 p {
+#step3 h6 {
   margin-bottom: 1.5rem;
+  padding: 1.1rem;
+  border: solid 1px gray;
+  color: gray;
 }
 
 span.error {
@@ -796,6 +807,18 @@ span.error {
   padding: 2rem 3rem;
   border: 1px solid black;
   margin-bottom: 1.5rem;
+}
+
+.recap .titre {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+
+.recap .titre img {
+  width: 20%;
+  height: 100%;
 }
 
 .recap h3 span {
@@ -827,6 +850,152 @@ span.error {
   align-items: center;
   gap: 3rem;
 }
+
+
+/* dispositif interactif */
+
+.dispositif {
+  background-color: rgb(14, 14, 14) !important;
+  color: white !important;
+}
+
+.dispositifInteractif {
+  display: none;
+}
+
+/* page */
+
+.qrwrapper {
+  display: flex;
+  width: 90%;
+  margin: 3rem auto;
+  gap: 7rem;
+}
+
+.qrwrapper h1 {
+  margin-bottom: 2rem;
+}
+
+.tutorial {
+  display: flex;
+  gap: 1rem;
+  align-items: end;
+  flex-direction: column;
+}
+
+.tutorial video {
+  width: 100%;
+}
+
+.qr {
+  margin: 0 3rem;
+}
+
+.qr img {
+  height: 20rem;
+}
+
+.tutorialwrapper {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+  gap: 5rem;
+}
+
+.tutorialwrapper a {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+.tutorialwrapper a:hover {
+  text-decoration: underline;
+}
+
+/* .mainSite ul li {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.mainSite li span:first {
+  margin-right: 2rem;
+  font-family: 'Playfair Display Italic', serif;
+  font-size: 4rem;
+  padding: 20px 30px;
+} */
+.mainSite .tutorial img {
+  height: 20rem;
+}
+
+
+.mainSite .tutorialwrapper ul {
+  counter-reset: section;
+  list-style: none;
+}
+
+.mainSite .tutorialwrapper li {
+  margin: 0 0 10px 0;
+  line-height: 40px;
+}
+
+.mainSite .tutorialwrapper li:before {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 5rem;
+  content: counter(section);
+  counter-increment: section;
+  display: inline-block;
+  padding-top: 10px;
+  width: 90px;
+  height: 90px;
+  margin: 0 20px 0 0;
+  border: 1px solid #ccc;
+  border-radius: 100%;
+  text-align: center;
+}
+
+
+/* mentions légales */
+
+
+.banner {
+  height: 13rem;
+  width: 100%;
+  background-image: url('../assets/tableaux/camille_versailles.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 4rem;
+}
+
+.banner.cgv {
+  background-image: url('../assets/tableaux/moret_printemps.jpg');
+  background-position: bottom;
+
+
+}
+
+.mentions {
+  width: 50%;
+}
+
+.mentions p,
+.mentions h4 {
+  margin-bottom: 2.3rem;
+}
+
+.mentions li {
+  line-height: 2rem;
+}
+
+.mentions hr {
+  margin: 3rem 0;
+}
+
+
+
+
 
 footer {
   padding: 3rem 2rem;
@@ -892,6 +1061,14 @@ footer .categories-list {
 
 @media screen and (max-width:900px) {
 
+  .mainSite {
+    display: none !important;
+  }
+
+  .dispositifInteractif {
+    display: block !important;
+  }
+
   .navbar .home {
     display: none;
   }
@@ -913,6 +1090,21 @@ footer .categories-list {
   main.wrapper article {
     width: 100%;
   }
+
+
+  .recap {
+    padding: 2rem;
+  }
+
+  .recap h3 {
+    font-size: 1.1rem;
+  }
+
+
+  .mentions {
+    width: 80%;
+  }
+
 
 
   .flex,
